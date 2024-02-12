@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  client:
+    build: ./Client
+    depends_on:
+      - server
+#    network_mode: "host"
+    network_mode: service:server
+    image: ccss-client
+    container_name: "ccss_client"
+
+  server:
+    build: ./Server
+    image: ccss-server
+#    network_mode: "host"
+    container_name: "ccss_server"
+
