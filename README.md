@@ -9,3 +9,4 @@ The concepts implemented in the job are:
 - The build process is performed in the Docker containers.
 - After the build, the executables are copied to the new clean containers so the source code doesn't go to the production.
 - The Docker-compose script creates the dockers.
+- The executables are stored in the /app directory of the each container.
