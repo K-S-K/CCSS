@@ -7,3 +7,5 @@
 - ```sudo docker rm 42928f35f2f1 eecbbec31cb4``` - Remove these two containers.
 - ```sudo docker images -a``` - List all images
 - ```sudo docker rmi ccss-client ccss-server``` - Remove these two images.
+- 
+- ```docker exec -it [container-id] bash``` - Enter to the Docker Container session with command line
