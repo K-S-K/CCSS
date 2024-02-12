@@ -1,6 +1,6 @@
 # CCSS - Cross Container Signal Exchange
 
-The purpose of this project is to adjust the approach of creating several projects in different containers and let them communicate with each other via sockets.
+The purpose of this project is to adjust the approach of creating several projects in different containers and let them communicate with each other via sockets. The project can be used as a template for creating more complex projects.
 
 The concepts implemented in the job are:
 - There are two separate processes: the Client and the Server.
