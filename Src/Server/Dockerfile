@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . /app
 
-RUN g++ -o ./server ./Server.cpp
+RUN g++ -o ./server ./Main.cpp ./Server.cpp
 
 FROM ubuntu:latest
 COPY --from=build /app/server /app/server
