@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . /app
 
-RUN g++ -o ./client ./Client.cpp
+RUN g++ -o ./client ./Main.cpp ./Client.cpp
 
 FROM ubuntu:latest
 COPY --from=build /app/client /app/client

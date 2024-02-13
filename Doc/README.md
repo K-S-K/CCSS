@@ -9,3 +9,9 @@
 - ```sudo docker rmi ccss-client ccss-server``` - Remove these two images.
 - 
 - ```docker exec -it [container-id] bash``` - Enter to the Docker Container session with command line
+
+
+
+#### To start the Client and the Server
+- Go to the Src directory
+- Type the command docker-compose up --build
