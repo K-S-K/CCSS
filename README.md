@@ -14,4 +14,4 @@ The concepts implemented in the job are:
 
 #### To start the Client and the Server
 - Go to the Src directory
-- Type the command docker-compose up --build
+- Type the command ```docker-compose up --build```
