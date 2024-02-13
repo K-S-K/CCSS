@@ -5,7 +5,7 @@
 - Type the command ```docker-compose up --build```
 
 
-#### Other Useful Commands:
+#### Other Useful Docker Commands:
 - ```cd Src``` - this is the directory from which all commands must be called.
 - ```sudo docker-compose up --build``` - Update and start all containers.
 - ```sudo docker ps -a``` - List all the containers.
