@@ -1,6 +1,11 @@
 # CCSS - Cross Container Signal Exchange
 
-#### Useful commands:
+#### To start the Client and the Server
+- Go to the Src directory
+- Type the command ```docker-compose up --build```
+
+
+#### Other Useful Commands:
 - ```cd Src``` - this is the directory from which all commands must be called.
 - ```sudo docker-compose up --build``` - Update and start all containers.
 - ```sudo docker ps -a``` - List all the containers.
@@ -9,9 +14,3 @@
 - ```sudo docker rmi ccss-client ccss-server``` - Remove these two images.
 - 
 - ```docker exec -it [container-id] bash``` - Enter to the Docker Container session with command line
-
-
-
-#### To start the Client and the Server
-- Go to the Src directory
-- Type the command ```docker-compose up --build```
