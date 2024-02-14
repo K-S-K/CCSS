@@ -22,7 +22,7 @@ bool Client::Start()
     if ((Sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     {
         std::cerr << "Socket creation error" << std::endl;
-        return -1;
+        return false;
     }
 
     struct sockaddr_in serv_addr;
@@ -33,15 +33,17 @@ bool Client::Start()
     if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0)
     {
         std::cerr << "Invalid address/ Address not supported" << std::endl;
-        return -1;
+        return false;
     }
 
     // Connect to server
     if (connect(Sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
     {
         std::cerr << "Connection Failed" << std::endl;
-        return -1;
+        return false;
     }
+
+    return true;
 }
 
 void Client::Send(char *message)

@@ -11,7 +11,10 @@ int main()
     char buffer[1024] = {0};
     char message[] = "Hello from client";
 
-    client.Start();
+    if (!client.Start())
+    {
+        return -1;
+    }
 
     // Send message to server
     client.Send(message);
