@@ -1,16 +1,16 @@
 FROM ubuntu:latest AS build
 
 RUN apt-get update && apt-get install -y \
-    g++ \
+    g++ make \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY . /app
 
-RUN g++ -o ./client ./Main.cpp ./Client.cpp
+RUN make
 
 FROM ubuntu:latest
-COPY --from=build /app/client /app/client
+COPY --from=build ../../Bin/client /app/client
 
 EXPOSE 8080
 
