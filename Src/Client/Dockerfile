@@ -10,7 +10,7 @@ COPY . /app
 RUN make
 
 FROM ubuntu:latest
-COPY --from=build ../../Bin/client /app/client
+COPY --from=build /app/Bin/client /app/client
 
 EXPOSE 8080
 
