@@ -29,13 +29,13 @@ int main()
 
     // Read message from client
     read(socketNumber, buffer, 1024);
-    std::cout << "Client: " << buffer << std::endl;
+    std::cout << "C ---> " << buffer << " ---> S" << std::endl;
 
     // Echo message back to client
     send(socketNumber, buffer, strlen(buffer), 0);
-    std::cout << "Message echoed back to client." << std::endl;
+    std::cout << "C <--- " << buffer << " <--- S" << std::endl;
 
-    std::cout << "Server is comleted its job." << std::endl;
+    std::cout << "Server is comleted." << std::endl;
 
     return 0;
 }
