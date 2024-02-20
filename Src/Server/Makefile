@@ -1,4 +1,4 @@
-BINDIR := ../../Bin
+BINDIR := ./Bin
 SOURCE := ./Main.cpp ./Server.cpp
 BINARY := $(addprefix $(BINDIR)/, server)
 
