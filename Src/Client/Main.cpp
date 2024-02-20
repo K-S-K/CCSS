@@ -9,20 +9,26 @@ int main()
 
     int valread;
     char buffer[1024] = {0};
-    char message[] = "Hello from client";
+    char message[] = "Hello";
 
-    if (!client.Start())
+    if (client.Start())
     {
-        return -1;
+        std::cout << "Client is started " << "." << std::endl;
+    }
+    else
+    {
+        return 1;
     }
 
     // Send message to server
     client.Send(message);
-    std::cout << "Message sent to server." << std::endl;
+    std::cout << "C ---> " << message << " ---> S" << std::endl;
 
     // Read response from server
     valread = read(client.Sock, buffer, 1024);
-    std::cout << "Server: " << buffer << std::endl;
+    std::cout << "C <--- " << buffer << " <--- S" << std::endl;
+
+    std::cout << "Client is comleted." << std::endl;
 
     return 0;
 }
