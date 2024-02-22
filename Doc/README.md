@@ -12,5 +12,6 @@
 - ```docker rm 42928f35f2f1 eecbbec31cb4``` - Remove these two containers.
 - ```docker images -a``` - List all images
 - ```docker rmi ccss-client ccss-server``` - Remove these two images.
+- ```docker image prune -a --force --filter "until=24h"``` - Remove all old images.
 - 
 - ```docker exec -it [container-id] bash``` - Enter to the Docker Container session with command line
