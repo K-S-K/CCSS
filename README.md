@@ -14,9 +14,13 @@ The purpose of this project is to adjust the approach of creating several projec
 
 #### To start the Client and the Server
 - Go to the Src directory
-- Type the command 
+- Type the command:
 ```
 docker-compose up --build
+```
+- Or this command:
+```
+docker-compose up --force-recreate
 ```
 
 
