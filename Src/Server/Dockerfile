@@ -1,16 +1,7 @@
-FROM ubuntu:latest AS build
-
-RUN apt-get update && apt-get install -y \
-    g++ make \
-    && rm -rf /var/lib/apt/lists/*
-
-WORKDIR /app
-COPY . /app
-
-RUN make
+FROM builder-2024-05:ver_1 AS built
 
 FROM ubuntu:latest
-COPY --from=build /app/Bin/server /app/server
+COPY --from=built /app/Server/Bin/server /app/server
 
 EXPOSE 8080
 
