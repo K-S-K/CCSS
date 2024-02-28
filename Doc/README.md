@@ -10,6 +10,7 @@
 - ```cd Src``` - this is the directory from which all commands must be called.
 - ```docker-compose up --build``` - Update and start all containers.
 - ```docker ps -a``` - List all the containers.
+- ```docker rm -v -f $(docker ps -qa)``` - Clean out all containers on my development machine
 - ```docker rm 42928f35f2f1 eecbbec31cb4``` - Remove these two containers.
 - ```docker images -a``` - List all images
 - ```docker rmi ccss-client ccss-server``` - Remove these two images.
