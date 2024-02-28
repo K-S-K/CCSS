@@ -28,5 +28,5 @@
 - [Creating a local Docker registry](https://kubeops.net/blog/creating-a-local-docker-registry)
 - [How to Use Your Own Registry](https://www.docker.com/blog/how-to-use-your-own-registry-2/)
 - []()
-- []()
+- [C++ Development Tutorial 4: Static and Dynamic Libraries](https://domiyanyue.medium.com/c-development-tutorial-4-static-and-dynamic-libraries-7b537656163e)
 - []()
