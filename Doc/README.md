@@ -17,3 +17,16 @@
 - ```docker image prune -a --force --filter "until=24h"``` - Remove all old images.
 - 
 - ```docker exec -it [container-id] bash``` - Enter to the Docker Container session with command line
+
+
+#### Further reads:
+- [Develop on a remote Docker host](https://code.visualstudio.com/remote/advancedcontainers/develop-remote-host)
+- []()
+- [Deploying Docker Containers over SSH](https://brunoscheufler.com/blog/2022-06-05-deploying-docker-containers-over-ssh)
+- [Running SSH Server in a Docker container](https://satvikakolisetty.medium.com/running-ssh-server-in-a-docker-container-55eb2a3add35)
+- [Setting Up a Local Docker Registry](https://www.allisonthackston.com/articles/local-docker-registry.html)
+- [Creating a local Docker registry](https://kubeops.net/blog/creating-a-local-docker-registry)
+- [How to Use Your Own Registry](https://www.docker.com/blog/how-to-use-your-own-registry-2/)
+- []()
+- []()
+- []()
