@@ -1,34 +1,42 @@
+#include <cstring>
 #include <iostream>
-#include <unistd.h>
 
 #include "Client.hpp"
+#include <unistd.h>
 
 int main()
 {
-    Client client = *(new Client(8080));
+    int message_count = 5;
+    const char *stop_word = "stop";
 
-    int valread;
-    char buffer[1024] = {0};
-    char message[] = "Hello";
+    sleep(1);
+
+    Client client = *(new Client(8080));
 
     if (client.Start())
     {
-        std::cout << "Client is started " << "." << std::endl;
+        std::cout << "Client is started." << std::endl;
     }
     else
     {
         return 1;
     }
 
-    // Send message to server
-    client.Send(message);
-    std::cout << "C ---> " << message << " ---> S" << std::endl;
+    for (int i = 0; i < message_count; i++)
+    {
+        char strBuf[80];
+        memset(strBuf, '\0', sizeof(strBuf));
+        sprintf(strBuf, "Ping %d", i);
 
-    // Read response from server
-    valread = read(client.Sock, buffer, 1024);
-    std::cout << "C <--- " << buffer << " <--- S" << std::endl;
+        client.Send(strBuf);
+    }
 
-    std::cout << "Client is comleted." << std::endl;
+    client.Send(stop_word);
+
+    if (client.Stop())
+    {
+        std::cout << "Client is completed its job." << std::endl;
+    }
 
     return 0;
 }

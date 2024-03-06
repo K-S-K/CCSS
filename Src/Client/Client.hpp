@@ -2,13 +2,17 @@ class Client
 {
 private:
     int Port;
+    int SocketId;
+    std::string Host;
+    
+    int BuffSize;
 
 public:
-    int Sock;
 
-    Client(int port);
+    Client(int port, std::string host = "127.0.0.1", int buffSize = 2048);
     ~Client();
 
     bool Start();
-    void Send(char *message);
+    bool Stop();
+    bool Send(const char *message, bool echo = true);
 };

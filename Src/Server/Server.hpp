@@ -1,14 +1,18 @@
 class Server
 {
 private:
-    int Port;
     struct sockaddr_in address;
-    int server_fd;
 
 public:
-    Server(int port);
+    int Port;
+    int SocketId;
+    int BuffSize;
+
+    Server(int port, int buffSize = 2048);
     ~Server();
 
     bool Start(void);
+    bool Stop();
+    bool CloseSocket(int socketId);
     int AcceptIncomingConnection();
 };
