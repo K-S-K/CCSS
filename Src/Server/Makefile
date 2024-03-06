@@ -3,7 +3,7 @@ SOURCE := ./Main.cpp ./Server.cpp
 BINARY := $(addprefix $(BINDIR)/, server)
 
 $(BINARY): $(SOURCE)
-	g++ -o $(BINARY) $(SOURCE)
+	g++ -g -o $(BINARY) $(SOURCE)
 
 $(BINARY): | $(BINDIR)
 

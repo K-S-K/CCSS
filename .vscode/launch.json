@@ -1,0 +1,64 @@
+{
+    "configurations": [
+        {
+            "name": "Debug Server",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Src/Server/Bin/server",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Src/Server/Bin",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Server",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug Client",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Src/Client/Bin/client",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Src/Client/Bin",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "serverLaunchTimeout": 40000,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Client",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Debug Server and Client",
+            "configurations": ["Debug Server", "Debug Client"]
+        }
+    ],
+    "version": "2.0.0"
+}
