@@ -12,6 +12,6 @@ COPY . /app
 WORKDIR /app/Client
 RUN make
 
-WORKDIR /app/Server
+WORKDIR /app/Collector
 RUN make
 

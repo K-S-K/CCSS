@@ -10,15 +10,15 @@ services:
   client:
     build: ./Client
     depends_on:
-      - server
+      - collector
 #    network_mode: "host"
-    network_mode: service:server
+    network_mode: service:collector
     image: ccss-client
     container_name: "ccss_client"
 
-  server:
-    build: ./Server
-    image: ccss-server
+  collector:
+    build: ./Collector
+    image: ccss-collector
 #    network_mode: "host"
-    container_name: "ccss_server"
+    container_name: "ccss_collector"
 
