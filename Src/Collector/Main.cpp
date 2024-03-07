@@ -19,7 +19,7 @@ int main()
 
     if (server.Start())
     {
-        std::cout << "Server is started." << std::endl;
+        std::cout << "Collector is started." << std::endl;
         std::cout << "Listening on port " << server.Port << std::endl;
         std::cout << "Obtained SocketId " << server.SocketId << std::endl;
     }
@@ -61,6 +61,6 @@ int main()
 
     if (server.Stop())
     {
-        std::cout << "Server is completed its job." << std::endl;
+        std::cout << "Collector is completed its job." << std::endl;
     }
 }
