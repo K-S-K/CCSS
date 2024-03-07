@@ -1,6 +1,6 @@
 BINDIR := ./Bin
-SOURCE := ./Main.cpp ./Client.cpp
-BINARY := $(addprefix $(BINDIR)/, client)
+SOURCE := ./Main.cpp ../Library/Client.cpp
+BINARY := $(addprefix $(BINDIR)/, emitter)
 
 $(BINARY): $(SOURCE)
 	g++ -g -o $(BINARY) $(SOURCE)

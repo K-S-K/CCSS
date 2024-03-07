@@ -1,6 +1,6 @@
 BINDIR := ./Bin
-SOURCE := ./Main.cpp ./Server.cpp
-BINARY := $(addprefix $(BINDIR)/, server)
+SOURCE := ./Main.cpp ../Library/Server.cpp
+BINARY := $(addprefix $(BINDIR)/, collector)
 
 $(BINARY): $(SOURCE)
 	g++ -g -o $(BINARY) $(SOURCE)

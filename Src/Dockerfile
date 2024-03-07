@@ -9,9 +9,9 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . /app
 
-WORKDIR /app/Client
+WORKDIR /app/Emitter
 RUN make
 
-WORKDIR /app/Server
+WORKDIR /app/Collector
 RUN make
 

@@ -1,8 +1,8 @@
 #include <cstring>
 #include <iostream>
-
-#include "Client.hpp"
 #include <unistd.h>
+
+#include "../Library/Client.hpp"
 
 int main()
 {
@@ -15,7 +15,7 @@ int main()
 
     if (client.Start())
     {
-        std::cout << "Client is started." << std::endl;
+        std::cout << "Emitter is started." << std::endl;
     }
     else
     {
@@ -35,7 +35,7 @@ int main()
 
     if (client.Stop())
     {
-        std::cout << "Client is completed its job." << std::endl;
+        std::cout << "Emitter is completed its job." << std::endl;
     }
 
     return 0;

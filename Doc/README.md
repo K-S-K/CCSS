@@ -1,6 +1,6 @@
 # CCSS - Cross Container Signal Exchange
 
-#### To start the Client and the Server
+#### To start the Emitter and the Collector
 - Go to the Src directory
 - Type the command 
 ```
@@ -19,7 +19,7 @@ docker-compose up --force-recreate
 - ```docker rm -v -f $(docker ps -qa)``` - Clean out all containers on my development machine
 - ```docker rm 42928f35f2f1 eecbbec31cb4``` - Remove these two containers.
 - ```docker images -a``` - List all images
-- ```docker rmi ccss-client ccss-server``` - Remove these two images.
+- ```docker rmi ccss-emitter ccss-collector``` - Remove these two images.
 - ```docker image prune -a --force --filter "until=24h"``` - Remove all old images.
 - 
 - ```docker exec -it [container-id] bash``` - Enter to the Docker Container session with command line

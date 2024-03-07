@@ -7,18 +7,18 @@ services:
     container_name: "builder-2024-05"
     image: builder-2024-05:ver_1
 
-  client:
-    build: ./Client
+  emitter:
+    build: ./Emitter
     depends_on:
-      - server
+      - collector
 #    network_mode: "host"
-    network_mode: service:server
-    image: ccss-client
-    container_name: "ccss_client"
+    network_mode: service:collector
+    image: ccss-emitter
+    container_name: "ccss_emitter"
 
-  server:
-    build: ./Server
-    image: ccss-server
+  collector:
+    build: ./Collector
+    image: ccss-collector
 #    network_mode: "host"
-    container_name: "ccss_server"
+    container_name: "ccss_collector"
 
