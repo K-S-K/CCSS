@@ -96,10 +96,10 @@
             }
         },
         {
-            "label": "Build Client",
+            "label": "Build Emitter",
             "type": "shell",
             "options": {
-                "cwd": "${workspaceFolder}/Src/Client"
+                "cwd": "${workspaceFolder}/Src/Emitter"
             },
             "command": "make",
             "group": {
@@ -125,7 +125,7 @@
         {
             "label": "Build All",
             "dependsOn": [
-                "Build Client",
+                "Build Emitter",
                 "Build Collector"
             ],
             "problemMatcher": {

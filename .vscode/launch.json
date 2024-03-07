@@ -27,13 +27,13 @@
             "miDebuggerPath": "/usr/bin/gdb"
         },
         {
-            "name": "Debug Client",
+            "name": "Debug Emitter",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Src/Client/Bin/client",
+            "program": "${workspaceFolder}/Src/Emitter/Bin/emitter",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/Src/Client/Bin",
+            "cwd": "${workspaceFolder}/Src/Emitter/Bin",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -50,14 +50,14 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build Client",
+            "preLaunchTask": "Build Emitter",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ],
     "compounds": [
         {
-            "name": "Debug Collector and Client",
-            "configurations": ["Debug Collector", "Debug Client"]
+            "name": "Debug Collector and Emitter",
+            "configurations": ["Debug Collector", "Debug Emitter"]
         }
     ],
     "version": "2.0.0"
