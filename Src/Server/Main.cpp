@@ -6,7 +6,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 
-#include "Server.hpp"
+#include "../Library/Server.hpp"
 
 
 int main()

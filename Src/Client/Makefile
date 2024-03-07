@@ -1,5 +1,5 @@
 BINDIR := ./Bin
-SOURCE := ./Main.cpp ./Client.cpp
+SOURCE := ./Main.cpp ../Library/Client.cpp
 BINARY := $(addprefix $(BINDIR)/, client)
 
 $(BINARY): $(SOURCE)
